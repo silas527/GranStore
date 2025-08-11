@@ -1,0 +1,9 @@
+--Criar uma aplicação .net MVC
+dotnet new mvc -o GranStore
+
+--Executar o projeto
+cd GranStore
+dotnet watch run
+
+--Para a execução
+ctrl + C 
