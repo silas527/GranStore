@@ -15,23 +15,63 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        Categoria categoria = new Categoria();
-        categoria.Id = 1;
-        categoria.Nome = "Eletrônicos";
+        List<Categoria> categorias = [
+            new() { Id = 1, Nome = "Notebook"},
+            new() { Id = 2, Nome = "Celular"},
+            new() { Id = 3, Nome = "Teclado"},
+            new() { Id = 4, Nome = "Monitor"},
+            new() { Id = 5, Nome = "Mouse"},
+            new() { Id = 6, Nome = "Playstation"},
+            
 
-        Categoria categoria2 = new()
-        (
-            Id = 2,
-            Nome = "Roupas"
-        );
+        ];
+
         List<Produto> produtos = [
             new() {
-                id = 1,
+                Id = 1,
                 Nome = "Notebook G15",
                 QtdeEstoque = 5,
                 ValorCusto = 2000m,
                 ValorVenda = 5500m,
-                Categoria = categoria,
+                Categoria = categorias[0],
+
+            },
+            new() {
+                Id = 2,
+                Nome = "Celular Xiaomi poco X7 Pro 5G",
+                QtdeEstoque = 7,
+                ValorCusto = 2180m,
+                ValorVenda = 6000m,
+                Categoria = categorias[1],
+
+            },
+        new() {
+            Id = 3,
+            Nome = "Teclado Mecânico Gamer",
+            QtdeEstoque = 6,
+            ValorCusto = 2000m,
+            ValorVenda = 4000m,
+            Categoria = categorias[2],
+        },
+        new() {
+            Id = 4,
+            Nome = "Monitor Dell de 24 - S2425H",
+            QtdeEstoque = 9,
+            ValorCusto = 2000m,
+            ValorVenda = 5000m,
+            Categoria = categorias[3],
+        },
+            new () {
+                Id = 5,
+                Nome = "Mouse",
+                QtdeEstoque = 50,
+                ValorCusto = 800,
+                ValorVenda = 35,
+                Categoria = categorias[4],
+
+            },
+            new () {
+                Id = 
             }
         ];
 
