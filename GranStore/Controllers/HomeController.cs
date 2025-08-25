@@ -5,24 +5,23 @@ using GranStore.Models;
 namespace GranStore.Controllers;
 
 public class HomeController : Controller
-{
+{ 
     private readonly ILogger<HomeController> _logger;
+
+    private List<Produto> produtos;
 
     public HomeController(ILogger<HomeController> logger)
     {
         _logger = logger;
-    }
 
-    public IActionResult Index()
-    {
         List<Categoria> categorias = [
-            new() { Id = 1, Nome = "Notebook"},
+           new() { Id = 1, Nome = "Notebook"},
             new() { Id = 2, Nome = "Celular"},
             new() { Id = 3, Nome = "Teclado"},
             new() { Id = 4, Nome = "Monitor"},
             new() { Id = 5, Nome = "Mouse"},
             new() { Id = 6, Nome = "Playstation"},
-            
+
 
         ];
 
@@ -71,13 +70,22 @@ public class HomeController : Controller
 
             },
             new () {
-                Id = 
+                Id =
             }
         ];
 
         return View();
     }
 
+    public IActionResult index()
+    {
+        List<Categoria> categorias = new
+    }
+    public IActionResult Produto(int id)
+    {
+        var produto = produtos
+        .SingleOrDefault(p)
+    }
     public IActionResult Privacy()
     {
         return View();
@@ -89,3 +97,8 @@ public class HomeController : Controller
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
 }
+    }
+
+    public IActionResult Index()
+    {
+       
